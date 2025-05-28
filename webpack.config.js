@@ -27,6 +27,14 @@ module.exports = {
         use: ["vue-style-loader", "css-loader"],
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "vue-style-loader",
+          "css-loader",
+          "sass-loader", // ← ここ、追加設定ナシに戻す！
+        ],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader",
