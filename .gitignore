@@ -1,0 +1,10 @@
+# ビルド成果物
+dist/
+
+# npmパッケージ
+node_modules/
+
+# IDEやOS系
+.DS_Store
+*.log
+.env

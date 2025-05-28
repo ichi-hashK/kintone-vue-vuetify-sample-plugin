@@ -1,0 +1,30 @@
+{
+  "name": "KintoneVueVuetifySamplePlugin",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node scripts/npm-start.js",
+    "develop": "npm run build -- --watch",
+    "build:vue": "webpack --config webpack.config.js && kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip src",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.3",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@cybozu/eslint-config": "^23.0.0",
+    "@kintone/plugin-packer": "^8.1.3",
+    "@vue/compiler-sfc": "^3.5.15",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.57.0",
+    "html-webpack-plugin": "^5.6.3",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "^4.0.0",
+    "vue": "^3.5.15",
+    "vue-loader": "^17.4.2",
+    "vue-style-loader": "^4.1.3",
+    "vuetify": "^3.8.7",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}
