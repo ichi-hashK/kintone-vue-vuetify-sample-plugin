@@ -5,8 +5,7 @@
   "type": "APP",
   "desktop": {
     "js": [
-      "js/desktop.js",
-      "js/vuetify.js"
+      "js/desktop.js"
     ],
     "css": [
       "css/51-modern-default.css",

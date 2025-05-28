@@ -5,7 +5,6 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     desktop: "./src/vue/desktop.js",
-    vuetify: "./src/vue/vuetify.js",
   },
   output: {
     path: path.resolve(__dirname, "src", "js"),
@@ -28,11 +27,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "vue-style-loader",
-          "css-loader",
-          "sass-loader", // ← ここ、追加設定ナシに戻す！
-        ],
+        use: ["vue-style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.js$/,
