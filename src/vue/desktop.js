@@ -4,6 +4,7 @@ import { aliases, mdi } from "vuetify/iconsets/mdi";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import MyApp from "./MyApp.ce.vue";
+import MyView from "./MyView.ce.vue";
 
 const vuetify = createVuetify({
   components,
@@ -45,5 +46,22 @@ function injectVuetifyCSSTo(shadowRoot) {
     shadowRoot.appendChild(mountPoint);
 
     createApp(MyApp).use(vuetify).mount(mountPoint);
+  });
+
+  kintone.events.on("app.record.index.show", (event) => {
+    if (event.viewId !== 8238972) {
+      // 作成したカスタマイズビューのIDを指定
+      return event;
+    }
+    // const wrapper = document.createElement("div");
+    // const shadowRoot = wrapper.attachShadow({ mode: "open" });
+    // header.appendChild(wrapper);
+
+    // injectVuetifyCSSTo(shadowRoot);
+
+    // const mountPoint = document.createElement("div");
+    // shadowRoot.appendChild(mountPoint);
+
+    createApp(MyView).use(vuetify).mount("#app");
   });
 })(kintone.$PLUGIN_ID);
